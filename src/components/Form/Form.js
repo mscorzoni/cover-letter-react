@@ -6,7 +6,7 @@ import Home from '../Home/home';
 class Form extends Component {
 
   state = {
-    receiver: 'Receiver',
+    receiver: 'Receiver ',
     receiverCompany: 'Company',
     position: 'Fullstack developer',
     sender: 'Marcos Scorzoni',
@@ -16,17 +16,6 @@ class Form extends Component {
     message: 'message'
   }
 
-  // inputHandler = (item) => {
-  //  return (
-  //   <input
-  //     placeholder="Receiver's Name"
-  //     onChange={(element,item) => this.setState({
-  //       item: 12
-  //     })
-  //   }
-  //   />)
-	// }
-	
 	submitButton = () => (
 			<div>
 				<ReactToPrint
@@ -34,7 +23,16 @@ class Form extends Component {
 					content={() => this.componentRef}
 				/>
 				<div className="home-hidden">
-					<Home ref={el => (this.componentRef = el)} />
+					<Home ref={el => (this.componentRef = el)} 
+							receiver={this.state.receiver}
+							receiverCompany={this.state.receiverCompany}
+							position={this.state.position}
+							sender={this.state.sender}
+							address={this.state.address}
+							phone={this.state.phone}
+							email={this.state.email}
+							message={this.state.message}
+							/>
 				</div>
 			</div>
 	)
