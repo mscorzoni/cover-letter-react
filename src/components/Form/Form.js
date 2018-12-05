@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ReactToPrint from "react-to-print";
+
+import Home from '../Home/home';
 
 class Form extends Component {
 
@@ -22,7 +25,19 @@ class Form extends Component {
   //     })
   //   }
   //   />)
-  // }
+	// }
+	
+	submitButton = () => (
+			<div>
+				<ReactToPrint
+					trigger={() => <a href="#">Print</a>}
+					content={() => this.componentRef}
+				/>
+				<div className="home-hidden">
+					<Home ref={el => (this.componentRef = el)} />
+				</div>
+			</div>
+	)
     
   render() {
     console.log(this.state)
@@ -86,8 +101,9 @@ class Form extends Component {
               message: element.target.value
             })}
           />
-
-          
+					<button>
+						{this.submitButton()}
+					</button>
         </form>
       </div>
     );

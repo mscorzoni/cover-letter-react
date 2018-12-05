@@ -81,7 +81,9 @@ h3{
     font-size: 13px;
     padding:10px;
     color:#fff;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-decoration: none;
 }
 
 .logContainer textarea {
@@ -93,4 +95,21 @@ h3{
     box-sizing: border-box;
     font-weight: 300;
 }
+
+.home-hidden {
+  display: none;
+}
+
+.logContainer button a {
+    background: #03a9f4;
+    font-size: 16px;
+    padding:10px;
+    color:#fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+
+
+
 
