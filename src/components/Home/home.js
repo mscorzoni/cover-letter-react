@@ -4,6 +4,9 @@ import { Document, Page } from "@react-pdf/renderer";
 class Home extends Component {
 
   render() {
+		const monthNames = ["January", "February", "March", "April", "May", "June",
+			"July", "August", "September", "October", "November", "December"
+		];
 		const props = this.props;
 		const today = new Date();
     return <Document>
@@ -15,7 +18,7 @@ class Home extends Component {
 					<div className="core">
 						<div className="left">
 							<div className="date">
-							<p>{today.getDate()}</p>
+							<p>{monthNames[today.getMonth()]} {today.getDate()}, {today.getFullYear()}</p>
 							</div>
 							<div className="receiver">
 								<p><strong>To</strong></p>

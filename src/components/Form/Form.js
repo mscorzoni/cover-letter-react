@@ -8,12 +8,12 @@ class Form extends Component {
   state = {
     receiver: 'Receiver ',
     receiverCompany: 'Company',
-    position: 'Fullstack developer',
-    sender: 'Marcos Scorzoni',
-    address: '11 Flat, Vancouver House, Surrey Quays Road, London, UK',
-    phone: '+44 07225 147 237',
-    email: 'mscorzoni@icloud.com',
-    message: 'message'
+    position: 'Your Position',
+    sender: 'Sender',
+    address: 'Sender Address',
+    phone: '+44 7777 777 777',
+    email: 'test@test.com',
+    message: 'Message'
   }
 
 	submitButton = () => (
